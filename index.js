@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 
 const database = {
-    host: "sql10.freesqldatabase.com",
+    host: "sql8.freesqldatabase.com",
     user: "sql8632033",
     password: "gtnLbfgucC",
     database: "sql8632033",
