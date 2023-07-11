@@ -19,16 +19,6 @@ app.all('/', (req, res) => {
 })
 app.listen(process.env.PORT || 3900)
 
-app.get("/api/data", (req, res) => {
-    const query = "SELECT * FROM signup;"; 
-
-    pool.query(query, (error, results) => {
-        if (error) {
-            return res.status(500).json({ error: "Error retrieving data from database." });
-        }
-        return res.json(results);
-    });
-});
 // insert data into a table
 // API endpoint to insert data into the database when a user signs up
 app.post("/api/signup", (req, res) => {
