@@ -42,7 +42,7 @@ app.post("/api/signup", (req, res) => {
     };
 
     // Create the SQL query to insert the data into the table
-    const query = "INSERT INTO SignUp SET ?";
+    const query = "INSERT INTO signup SET ?";
   
     // Execute the query with the data
     pool.query(query, values, function(error, results){
@@ -63,7 +63,7 @@ app.post("/api/signup", (req, res) => {
         accessnumber: req.body.accessnumber,
         password: req.body.password
     };
-    const query = "SELECT FirstName,LastName,Phone FROM SignUp WHERE Access_number = ? AND Password = ?";
+    const query = "SELECT FirstName,LastName,Phone FROM signup WHERE Access_number = ? AND Password = ?";
     pool.query(query, [values.accessnumber, values.password], function(error, result){
         if(error){
             console.log('Error retrieving data')
@@ -84,7 +84,7 @@ app.post("/api/initial", (req, res) => {
     };
 
     // Create the SQL query to insert the data into the table
-    const query = "INSERT INTO UserData SET ?";
+    const query = "INSERT INTO userdata SET ?";
   
     // Execute the query with the data
     pool.query(query, values, function(error, results){
