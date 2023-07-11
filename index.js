@@ -5,6 +5,13 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+const database = {
+    host: "sql10.freesqldatabase.com",
+    user: "sql8632033",
+    password: "gtnLbfgucC",
+    database: "sql8632033",
+};
+
 app.all('/', (req, res) => {
     console.log("Just got a request!")
     res.send('Yo!')
